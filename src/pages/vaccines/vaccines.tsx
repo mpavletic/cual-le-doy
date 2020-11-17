@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   IonContent,
   IonDatetime,
@@ -12,8 +12,17 @@ import {
 import './vaccines.css';
 
 const Vaccines: React.FC = () => {
+  const [bornDate, setBornDate] = React.useState(
+    localStorage.getItem('bornDate') || new Date().toISOString()
+  );
+
+  React.useEffect(() => {
+    localStorage.setItem('bornDate', bornDate);
+  }, [bornDate]);
+
+  const onIonDatetimeChange = (event: any) => setBornDate(event.detail.value);
+
   const maxDate = new Date().toISOString();
-  const [bornDate, setBornDate] = useState<string>(new Date().toISOString());
 
   return (
     <IonPage>
@@ -35,7 +44,7 @@ const Vaccines: React.FC = () => {
             displayFormat="DD/MM/YYYY"
             doneText="Listo"
             max={maxDate}
-            onIonChange={e => setBornDate(e.detail.value!)}
+            onIonChange={onIonDatetimeChange}
             value={bornDate}
           ></IonDatetime>
         </IonItem>
