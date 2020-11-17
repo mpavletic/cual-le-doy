@@ -1,0 +1,7 @@
+{
+  "name": "Cuál le doy?",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
