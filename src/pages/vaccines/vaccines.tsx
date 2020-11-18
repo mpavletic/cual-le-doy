@@ -5,22 +5,33 @@ import {
   IonHeader,
   IonItem,
   IonLabel,
+  IonList,
+  IonListHeader,
   IonPage,
   IonTitle,
   IonToolbar
 } from '@ionic/react';
-import './vaccines.css';
+import './Vaccines.css';
+import { IVaccine } from '../../services/IVaccine';
+import VaccinesService from '../../services/vaccines.service';
+import VaccineItem from '../../components/vaccine-item';
 
 const Vaccines: React.FC = () => {
-  const [bornDate, setBornDate] = React.useState(
+  let [bornDate, setBornDate] = React.useState(
     localStorage.getItem('bornDate') || new Date().toISOString()
+  );
+  let [items, setItems] = React.useState(
+    VaccinesService.getVaccinesFrom(bornDate)
   );
 
   React.useEffect(() => {
     localStorage.setItem('bornDate', bornDate);
   }, [bornDate]);
 
-  const onIonDatetimeChange = (event: any) => setBornDate(event.detail.value);
+  let onIonDatetimeChange = (event: any) => {
+    setBornDate(event.detail.value);
+    setItems(VaccinesService.getVaccinesFrom(event.detail.value));
+  };
 
   const maxDate = new Date().toISOString();
 
@@ -48,6 +59,14 @@ const Vaccines: React.FC = () => {
             value={bornDate}
           ></IonDatetime>
         </IonItem>
+        <IonList>
+          <IonListHeader>
+            Calendario de Vacunación
+          </IonListHeader>
+          {items.map((vaccine: IVaccine, index: number) =>
+            <VaccineItem vaccine={vaccine} key={index} />
+          )}
+        </IonList>
       </IonContent>
     </IonPage>
   );
