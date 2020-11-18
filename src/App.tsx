@@ -10,7 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, medkitOutline, triangle } from 'ionicons/icons';
+import { informationCircleOutline, medkitOutline, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import InfoPage from './pages/info/info';
 import Vaccines from './pages/vaccines/vaccines';
@@ -50,7 +50,7 @@ const App: React.FC = () => (
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
+            <IonIcon icon={informationCircleOutline} />
             <IonLabel>Info</IonLabel>
           </IonTabButton>
           <IonTabButton tab="vaccines" href="/vaccines">
