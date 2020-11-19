@@ -113,32 +113,39 @@ const InfoPage: React.FC = () => {
         <p className="ion-margin">
           <strong>Ilustraciones de Carlos Bonardi.</strong>&nbsp;Fuente: Art&iacute;culo de La Naci&oacute;n, "Consejos para lograr
           una lactancia exitosa".
-          <IonButton
-            fill="clear"
-            onClick={(e) => openLink('http://www.lanacion.com.ar/1140292-consejos-para-lograr-una-lactancia-exitosa')}
-          >
-            Consejos para lograr una lactancia exitosa
-          </IonButton>
         </p>
+        <IonButton
+          className="ion-margin ion-text-wrap"
+          expand="block"
+          fill="clear"
+          onClick={(e) => openLink('http://www.lanacion.com.ar/1140292-consejos-para-lograr-una-lactancia-exitosa')}
+        >
+          Consejos para lograr una lactancia exitosa
+        </IonButton>
         <p className="ion-margin">
           <strong>Fuente: Ministerio de Salud.</strong>"Lactancia Materna", sitio web "Lactancia Materna" consultado en Enero de
           2015.
-          <IonButton
-            fill="clear"
-            onClick={(e) => openLink('http://www.msal.gov.ar/index.php/contacto/347-lactancia-materna')}
-          >
-            Lactancia Materna
-          </IonButton></p>
+        </p>
+        <IonButton
+          className="ion-margin"
+          expand="block"
+          fill="clear"
+          onClick={(e) => openLink('http://www.msal.gov.ar/index.php/contacto/347-lactancia-materna')}
+        >
+          Lactancia Materna
+        </IonButton>
         <p className="ion-margin">
-          <strong>Para mayor informaci&oacute;n sobre la lactancia, no dudes en consultar</strong>
+          <strong>Para mayor informaci&oacute;n sobre la lactancia, no dudes en consultar www.dardemamar.com.</strong>
+          En este sitio podr&aacute;s encontrar articulos, consejos &uacute;tiles, aplicaciones para descargar y muchas cosas m&aacute;s.
+        </p>
           <IonButton
+            className="ion-margin"
+            expand="block"
             fill="clear"
             onClick={(e) => openLink('http://www.dardemamar.com/')}
           >
-            www.dardemamar.com
+            Dar de mamar
           </IonButton>
-          En este sitio podr&aacute;s encontrar articulos, consejos &uacute;tiles, aplicaciones para descargar y muchas cosas m&aacute;s.
-        </p>
       </IonContent>
     </IonPage>
   );
