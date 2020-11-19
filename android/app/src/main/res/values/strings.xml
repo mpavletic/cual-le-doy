@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cuál le doy?</string>
+    <string name="title_activity_main">Cuál le doy?</string>
+    <string name="package_name">com.mpavletic.cualledoy</string>
+    <string name="custom_url_scheme">com.mpavletic.cualledoy</string>
+</resources>
