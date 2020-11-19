@@ -1,11 +1,11 @@
 import React from 'react';
 import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonPage, IonSlide, IonSlides, IonTitle, IonToolbar } from '@ionic/react';
 import './info.css';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 const InfoPage: React.FC = () => {
   let openLink = (link: string) => {
-    // TODO add plugin
-    window.location.href = link;
+      InAppBrowser.create(link, '_blank');
   };
 
   return (
@@ -123,14 +123,13 @@ const InfoPage: React.FC = () => {
           Consejos para lograr una lactancia exitosa
         </IonButton>
         <p className="ion-margin">
-          <strong>Fuente: Ministerio de Salud.</strong>"Lactancia Materna", sitio web "Lactancia Materna" consultado en Enero de
-          2015.
+          <strong>Fuente: Ministerio de Salud.</strong>"Lactancia Materna", sitio web "Lactancia Materna".
         </p>
         <IonButton
           className="ion-margin"
           expand="block"
           fill="clear"
-          onClick={(e) => openLink('http://www.msal.gov.ar/index.php/contacto/347-lactancia-materna')}
+          onClick={(e) => openLink('https://www.argentina.gob.ar/salud/crecerconsalud/lactancia')}
         >
           Lactancia Materna
         </IonButton>
