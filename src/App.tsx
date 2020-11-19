@@ -10,10 +10,10 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, medkitOutline, triangle } from 'ionicons/icons';
+import { informationCircleOutline, medkitOutline, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Vaccines from './pages/vaccines/Vaccines';
+import InfoPage from './pages/info/info';
+import Vaccines from './pages/vaccines/vaccines';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -40,7 +40,7 @@ const App: React.FC = () => (
       <IonTabs>
         <IonRouterOutlet>
           <Route path="/tab1" component={Tab1} exact={true} />
-          <Route path="/tab2" component={Tab2} exact={true} />
+          <Route path="/tab2" component={InfoPage} exact={true} />
           <Route path="/vaccines" component={Vaccines} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
@@ -50,8 +50,8 @@ const App: React.FC = () => (
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonIcon icon={informationCircleOutline} />
+            <IonLabel>Info</IonLabel>
           </IonTabButton>
           <IonTabButton tab="vaccines" href="/vaccines">
             <IonIcon icon={medkitOutline} />

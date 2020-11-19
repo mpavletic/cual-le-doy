@@ -11,7 +11,7 @@ import {
   IonTitle,
   IonToolbar
 } from '@ionic/react';
-import './Vaccines.css';
+import './vaccines.css';
 import { IVaccine } from '../../services/IVaccine';
 import VaccinesService from '../../services/vaccines.service';
 import VaccineItem from '../../components/vaccine-item';
