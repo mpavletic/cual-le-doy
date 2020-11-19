@@ -1,29 +1,35 @@
 import { IItem } from './IItem';
 
 export function useItems() {
+    let items: IItem[] = localStorage['items'] ? JSON.parse(localStorage['items']) : [];
 
     const add = (item: IItem) => {
-        let items = getAll();
-
         items.unshift(item);
         localStorage['items'] = JSON.stringify(items);
     };
 
     const getAll = (): IItem[] => {
-        let items = localStorage['items'];
-
-        return items !== undefined ? JSON.parse(items) : [];
+        return items;
     };
 
     const getActual = (): IItem | null => {
-        let items = getAll();
-
         return items.length > 0 ? items[0] : null;
-    }
+    };
+
+    const updateActual = (newItem: IItem) => {
+        items[0] = newItem;
+        localStorage['items'] = JSON.stringify(items);
+    };
+
+    const size = () => {
+        return items.length;
+    };
 
     return {
         add,
         getAll,
-        getActual
+        getActual,
+        updateActual,
+        size
     };
 }
