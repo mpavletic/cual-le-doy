@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonPage, IonRadio, IonRadioGroup, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import { play, square } from 'ionicons/icons';
 
@@ -9,8 +9,8 @@ import BreastFeedItem from '../../components/breastfeed-item';
 import './home.css';
 
 const HomePage: React.FC = () => {
-  const [selected, setSelected] = useState<string>('left');
-  const [hasStarted, setHasStarted] = useState<boolean>(false);
+  const [selected, setSelected] = React.useState<string>('left');
+  const [hasStarted, setHasStarted] = React.useState<boolean>(false);
   const { add, getAll, getActual, updateActual } = useItems();
   const [items, setItems] = React.useState(getAll());
 
