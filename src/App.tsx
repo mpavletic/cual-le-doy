@@ -10,8 +10,8 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { informationCircleOutline, medkitOutline, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
+import { homeOutline, informationCircleOutline, medkitOutline } from 'ionicons/icons';
+import HomePage from './pages/home/home';
 import InfoPage from './pages/info/info';
 import Vaccines from './pages/vaccines/vaccines';
 
@@ -39,15 +39,15 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={Tab1} exact={true} />
+          <Route path="/tab1" component={HomePage} exact={true} />
           <Route path="/tab2" component={InfoPage} exact={true} />
           <Route path="/vaccines" component={Vaccines} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon icon={homeOutline} />
+            <IonLabel>Inicio</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon icon={informationCircleOutline} />
