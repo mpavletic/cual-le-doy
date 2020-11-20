@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   const [selected, setSelected] = useState<string>('left');
   const [hasStarted, setHasStarted] = useState<boolean>(false);
   const { add, getAll, getActual, updateActual } = useItems();
-  const [items] = React.useState(getAll());
+  const [items, setItems] = React.useState(getAll());
 
   let start = () => {
     setHasStarted(true);
@@ -23,6 +23,7 @@ const HomePage: React.FC = () => {
     });
 
     setSelected(selected === 'left' ? 'right' : 'left');
+    setItems(getAll());
   };
 
   let stop = () => {
@@ -32,6 +33,7 @@ const HomePage: React.FC = () => {
       item.duration = new Date().getTime() - item.date;
       updateActual(item);
     }
+    setItems(getAll());
   };
 
   return (
