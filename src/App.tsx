@@ -40,14 +40,14 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/tab1" component={HomePage} exact={true} />
-          <Route path="/tab2" component={InfoPage} exact={true} />
+          <Route path="/home" component={HomePage} exact={true} />
+          <Route path="/info" component={InfoPage} exact={true} />
           <Route path="/vaccines" component={Vaccines} />
           <Route path="/history" component={HistoryPage} />
-          <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
+          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="home" href="/home">
             <IonIcon icon={homeOutline} />
             <IonLabel>Inicio</IonLabel>
           </IonTabButton>
@@ -55,13 +55,13 @@ const App: React.FC = () => (
             <IonIcon icon={albumsOutline} />
             <IonLabel>Historial</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={informationCircleOutline} />
-            <IonLabel>Info</IonLabel>
-          </IonTabButton>
           <IonTabButton tab="vaccines" href="/vaccines">
             <IonIcon icon={medkitOutline} />
             <IonLabel>Vacunas</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="info" href="/info">
+            <IonIcon icon={informationCircleOutline} />
+            <IonLabel>Info</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
