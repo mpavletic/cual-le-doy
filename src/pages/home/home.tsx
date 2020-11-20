@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
           </IonRow>
         </IonGrid>
         <IonList>
-          {items.map((item: IItem, index: number) =>
+          {items.slice(0, 10).map((item: IItem, index: number) =>
             <BreastFeedItem item={item} key={index} />
           )}
         </IonList>
