@@ -52,7 +52,7 @@ const Vaccines: React.FC = () => {
           <IonLabel>Fecha de nacimiento</IonLabel>
           <IonDatetime
             cancelText="Cancelar"
-            displayFormat="DD/MM/YYYY"
+            locale="es-ES"
             doneText="Listo"
             max={maxDate}
             onIonChange={onIonDatetimeChange}
