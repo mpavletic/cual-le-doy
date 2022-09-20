@@ -10,6 +10,7 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import { setupIonicReact } from '@ionic/react';
 import { homeOutline, informationCircleOutline, medkitOutline } from 'ionicons/icons';
 import HomePage from './pages/home/home';
 import InfoPage from './pages/info/info';
@@ -33,6 +34,10 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+
+setupIonicReact({
+  mode: 'md'
+});
 
 const App: React.FC = () => (
   <IonApp>

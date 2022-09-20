@@ -2,11 +2,13 @@ import React from 'react';
 import {
   IonContent,
   IonDatetime,
+  IonDatetimeButton,
   IonHeader,
   IonItem,
   IonLabel,
   IonList,
   IonListHeader,
+  IonModal,
   IonPage,
   IonTitle,
   IonToolbar
@@ -50,14 +52,20 @@ const Vaccines: React.FC = () => {
         </IonHeader>
         <IonItem>
           <IonLabel>Fecha de nacimiento</IonLabel>
-          <IonDatetime
-            cancelText="Cancelar"
-            displayFormat="DD/MM/YYYY"
-            doneText="Listo"
-            max={maxDate}
-            onIonChange={onIonDatetimeChange}
-            value={bornDate}
-          ></IonDatetime>
+          <IonDatetimeButton datetime='born-date'></IonDatetimeButton>
+          <IonModal keepContentsMounted={true}>
+            <IonDatetime
+              cancelText="Cancelar"
+              doneText="Listo"
+              id="born-date"
+              locale="es-ES"
+              max={maxDate}
+              onIonChange={onIonDatetimeChange}
+              presentation="date"
+              showDefaultButtons
+              value={bornDate}
+            ></IonDatetime>
+          </IonModal>
         </IonItem>
         <IonList>
           <IonListHeader>
