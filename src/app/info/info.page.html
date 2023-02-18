@@ -1,17 +1,110 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Información Útil
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content class="ion-padding" [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Información Útil</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-accordion-group expand="inset">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Qué es?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>La lactancia materna es reconocida como la forma óptima de alimentación temprana, por sus innumerables beneficios sobre
+          la salud de las mujeres y los niños, tanto a corto como a largo plazo.</p>
+        <p>Se recomienda que los niños sean amamantados exclusivamente hasta los 6 meses de vida cumplidos y que, a partir de
+          ese momento, comiencen a introducir alimentos en su dieta sin abandonar la lactancia materna. Idealmente, la lactancia
+          materna complementada con alimentos debe extenderse hasta los 2 años o más de vida del niño.</p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label class="ion-text-wrap">¿Cuáles son los beneficios de la leche materna?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>La leche materna le brinda al recién nacido, todos los elementos que necesita para su crecimiento y desarrollo saludables.
+          El calostro, la primera leche de la mamá, de color amarillento, es el mejor alimento que puede recibir el bebé ya
+          que lo defiende de las infecciones más comunes.</p>
+        <p>Además, la leche materna está adaptada a las necesidades y posibilidades de su hijo y por ello se digiere más fácilmente
+          que cualquier otra leche. La leche materna es más segura e higiénica porque el niño la toma directamente de su mamá.</p>
+        <p>A través de su leche, la mamá le transmite al bebé factores de protección (“anticuerpos”) que lo protegen contra las
+          enfermedades más comunes cuando son muy pequeños y hasta que sean capaces de formar sus propias defensas.</p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Qué es la lactancia a demanda?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>Es importante alimentar al bebé cada vez que lo pida, durante el día y la noche; esto se llama “lactancia a demanda”.
+          Los bebés piden cuando tienen hambre o sed, y esto favorece que la madre produzca toda la leche que su hijo necesita.</p>
+        <p>La mamá podrá identificar los signos tempranos de hambre del niño, como chuparse la mano, buscar el pecho con la boca
+          o chasquear los labios. El llanto no siempre indica hambre, sino que es la forma que tiene bebé para expresar también
+          otras necesidades.</p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth">
+      <ion-item slot="header" color="light">
+        <ion-label class="ion-text-wrap">¿Cómo continuar con la lactancia en la vuelta al trabajo?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>El trabajo fuera del hogar es parte de la vida de muchísimas mujeres y la legislación prevé el derecho de las madres
+          a amamantar a sus bebés asegurando descansos para lactancia. En estos casos la mamá puede extraerse leche (con una
+          bomba o manualmente) y conservarla en un recipiente limpio y tapado. La leche se entibia a baño María (con el fuego
+          apagado); no debe hervirse ni ser calentada en microondas para que no pierda sus propiedades.</p>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="five">
+      <ion-item slot="header" color="light">
+        <ion-label class="ion-text-wrap">¿Cuál es la mejor posición para amamantar?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <p>Existen muchas posiciones para amamantar, al principio es recomendable variarla para asegurar un mejor vaciado del
+          pecho. Con el tiempo, la mamá y el bebé encontrarán la que les resulte más cómoda.</p>
+        <p>Es importante saber que el cuerpo del bebé tiene que estar bien pegado a la mamá (ella no debe inclinarse hacia el
+          bebé sino que el bebé debe ser llevado hacia el cuerpo de la mamá); la boca del bebé debe estar bien abierta y tomar
+          la mayor parte posible de la areola, y la mamá debe estar cómoda sin tensiones en el cuerpo.</p>
+          <ion-slides pager>
+            <ion-slide>
+              <ion-card>
+                <img src="assets/images/lactancia-1.png" alt="Posici&oacute;n Clasica" class="slide-image">
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card>
+                <img src="assets/images/lactancia-2.png" alt="Posici&oacute;n Clasica Cruzada" class="slide-image">
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card>
+                <img src="assets/images/lactancia-3.png" alt="Posici&oacute;n Inversa" class="slide-image">
+              </ion-card>
+            </ion-slide>
+            <ion-slide>
+              <ion-card>
+                <img src="assets/images/lactancia-4.png" alt="Posici&oacute;n Acostada" class="slide-image">
+              </ion-card>
+            </ion-slide>
+          </ion-slides>
+      </div>
+    </ion-accordion>
+
+
+
+  </ion-accordion-group>
+  <p class="padding"><ion-text color="secondary">Ilustraciones de Carlos Bonardi.</ion-text>&nbsp;Fuente: Art&iacute;culo de La Naci&oacute;n, "Consejos para lograr
+    una lactancia exitosa". <a (click)="openLink('http://www.lanacion.com.ar/1140292-consejos-para-lograr-una-lactancia-exitosa')">www.lanacion.com.ar/1140292-consejos-para-lograr-una-lactancia-exitosa</a></p>
+  <p><ion-text color="secondary">Fuente: Ministerio de Salud.</ion-text>"Lactancia Materna", sitio web "Lactancia Materna" consultado en Enero de
+    2015. <a (click)="openLink('http://www.msal.gov.ar/index.php/contacto/347-lactancia-materna')">www.msal.gov.ar/index.php/contacto/347-lactancia-materna</a></p>
+  <p><ion-text color="secondary">Para mayor informaci&oacute;n sobre la lactancia, no dudes en consultar&nbsp;</ion-text> <a (click)="openLink('http://www.dardemamar.com/')">www.dardemamar.com</a>.
+    En este sitio podr&aacute;s encontrar articulos, consejos &uacute;tiles, aplicaciones para descargar y muchas cosas m&aacute;s.</p>
 </ion-content>

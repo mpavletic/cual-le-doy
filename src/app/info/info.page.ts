@@ -9,4 +9,8 @@ export class InfoPage {
 
   constructor() {}
 
+  public openLink(url: String) {
+    // TODO use browser link
+  }
+
 }
