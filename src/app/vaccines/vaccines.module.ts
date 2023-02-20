@@ -6,6 +6,7 @@ import { VaccinesPage } from './vaccines.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { VaccinesPageRoutingModule } from './vaccines-routing.module';
+import { AgePipe } from '../pipes/age.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { VaccinesPageRoutingModule } from './vaccines-routing.module';
     ExploreContainerComponentModule,
     VaccinesPageRoutingModule
   ],
-  declarations: [VaccinesPage]
+  declarations: [VaccinesPage, AgePipe]
 })
 export class VaccinesPageModule {}
