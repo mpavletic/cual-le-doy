@@ -21,8 +21,6 @@ import { VaccinesService } from '../services/vaccines.service';
     VaccinesPage,
     AgePipe
   ],
-  providers: [
-    VaccinesService
-  ]
+  providers: []
 })
 export class VaccinesPageModule {}
