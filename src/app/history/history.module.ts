@@ -6,7 +6,7 @@ import { HistoryPage } from './history.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { HistoryPageRoutingModule } from './history-routing.module';
-import { LeftorrightPipe } from '../pipes/leftorright.pipe';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -14,11 +14,11 @@ import { LeftorrightPipe } from '../pipes/leftorright.pipe';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    HistoryPageRoutingModule
+    HistoryPageRoutingModule,
+    PipesModule
   ],
   declarations: [
-    HistoryPage,
-    LeftorrightPipe
+    HistoryPage
   ]
 })
 export class HistoryPageModule {}

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AgePipe implements PipeTransform {
 
-  transform(value: number, ...args: unknown[]): string {
+  transform(value: number): string {
     if (value === 0) {
       return 'Recién Nacido';
     } else if (value < 24) {

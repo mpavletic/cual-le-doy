@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { VaccinesPageRoutingModule } from './vaccines-routing.module';
 import { AgePipe } from '../pipes/age.pipe';
 import { VaccinesService } from '../services/vaccines.service';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   imports: [
@@ -15,12 +16,10 @@ import { VaccinesService } from '../services/vaccines.service';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    VaccinesPageRoutingModule
+    VaccinesPageRoutingModule,
+    PipesModule
   ],
-  declarations: [
-    VaccinesPage,
-    AgePipe
-  ],
+  declarations: [VaccinesPage],
   providers: []
 })
 export class VaccinesPageModule {}
