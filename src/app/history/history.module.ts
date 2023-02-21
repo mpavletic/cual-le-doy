@@ -6,6 +6,7 @@ import { HistoryPage } from './history.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { HistoryPageRoutingModule } from './history-routing.module';
+import { LeftorrightPipe } from '../pipes/leftorright.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import { HistoryPageRoutingModule } from './history-routing.module';
     ExploreContainerComponentModule,
     HistoryPageRoutingModule
   ],
-  declarations: [HistoryPage]
+  declarations: [
+    HistoryPage,
+    LeftorrightPipe
+  ]
 })
 export class HistoryPageModule {}
