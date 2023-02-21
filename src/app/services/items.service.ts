@@ -33,7 +33,7 @@ export class ItemsService {
 
   public deleteItemByDate(time: number): void {
     this.items = this.items.filter(item => item.date !== time);
-    localStorage['items'] = JSON.stringify(this.items);
+    localStorage[this.ITEMS_KEY] = JSON.stringify(this.items);
   }
 
   public deleteAll(): void {
